@@ -29,8 +29,13 @@ public class DynamicPage {
         Map root = new HashMap<>();
         root.put("title", "Данные кота");
 
-        Cat cat = new Cat("Пушок", 10, true);
-        root.put("cat",  cat);
+        Cat cat1 = new Cat("Пушок", 10, true);
+        Cat cat2 = new Cat("Кусец", 5, false);
+        Cat cat3 = new Cat("Черныщ", 7, true);
+
+        root.put("cat1",  cat1);
+        root.put("cat2", cat2);
+        root.put("cat3", cat3);
 
         Template template = config.getTemplate("index.html");
         template.process(root, writer);
